@@ -1,3 +1,16 @@
 .popup__form {
   margin-top: 27px;
 }
+
+.popup__error {
+  color: #ff0000;
+  opacity: 0;
+  font-size: 12px;
+  display: block;
+  min-height: 30px;
+  margin-top: 5px; 
+}
+
+.popup__error_visible {
+  opacity: 1;
+}
