@@ -21,7 +21,7 @@ export function closeModal(popup) {
 }
 
 // Функция для добавления слушателей событий к модальному окну
-export function popupListeners(popup) {
+export function addPopupListeners(popup) {
     const closePopupButton = popup.querySelector('.popup__close');
 
     closePopupButton.addEventListener('click', () => closeModal(popup));

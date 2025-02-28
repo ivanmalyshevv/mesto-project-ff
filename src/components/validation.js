@@ -22,8 +22,6 @@ function showInputError(inputElement, errorMessage, formElement, validConfig) {
   function checkInputValidity(inputElement, formElement, validConfig) {
     if (inputElement.validity.patternMismatch) {
       inputElement.setCustomValidity(inputElement.dataset.errorMessage);
-    } else if (inputElement.type === "url" && inputElement.validity.typeMismatch) {
-      inputElement.setCustomValidity("Введите адрес сайта"); 
     } else {
       inputElement.setCustomValidity("");
     }
@@ -34,7 +32,6 @@ function showInputError(inputElement, errorMessage, formElement, validConfig) {
       hideInputError(inputElement, formElement, validConfig);
     }
   }
-  
   // Функция для проверки наличия невалидных полей
   function hasInvalidInput(inputList) {
     return inputList.some((inputElement) => !inputElement.validity.valid);
